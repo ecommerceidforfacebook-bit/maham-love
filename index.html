@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Maham ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    background: radial-gradient(circle, #000011, #0a0a23);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+.container {
+    width: 95%;
+    max-width: 420px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 25px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 0 40px rgba(255, 0, 100, 0.35);
+    backdrop-filter: blur(6px);
+}
+h1 { font-size: 28px; margin-bottom: 10px; }
+p { font-size: 17px; line-height: 1.6; }
+.heart {
+    font-size: 70px;
+    animation: beat 1.3s infinite;
+    margin-bottom: 15px;
+    color: #ff4d8d;
+}
+@keyframes beat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.35); }
+    100% { transform: scale(1); }
+}
+.hidden { display: none; }
+.signature { margin-top: 30px; font-style: italic; opacity: 0.8; }
+</style>
+</head>
+<body>
+
+<div class="container" id="lock">
+    <h1>🔒 Only for Maham</h1>
+    <p>This message holds my heart 💖</p>
+    <input type="password" id="pass" placeholder="Enter password" style="width:100%;padding:12px;margin-top:15px;border-radius:25px;border:none;font-size:16px;">
+    <button onclick="unlock()" style="width:100%;padding:12px;margin-top:15px;border-radius:25px;border:none;font-size:16px;background:#ff2f6d;color:white;">Unlock ❤️</button>
+</div>
+
+<div class="container hidden" id="content">
+    <audio id="music" autoplay loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="heart">❤️</div>
+    <h1>Maham, I'm Truly Sorry</h1>
+    <p>
+        I never meant to hurt you, but I did — and that regret stays with me.<br>
+        When you’re upset, my whole world feels silent.<br>
+        You are my peace, my home, my happiness 🤍
+    </p>
+    <p>
+        <b>Urdu Shayari:</b><br>
+        ہم دور نہیں رہ سکتے آپ سے، یہ اب مان لیا ہے،<br>
+        کوئی نہیں یہاں تیرے سوا، یہ دل جان گیا ہے۔<br>
+        ایک لمحہ بھی تیرے بغیر گزر نہیں پاتا،<br>
+        جدائی کا تصور ہی ہمیں توڑ گیا ہے۔
+    </p>
+    <div class="signature">— From: Mahad</div>
+</div>
+
+<script>
+function unlock() {
+    var pass = document.getElementById("pass").value;
+    if(pass === "MeriJanMaham"){
+        document.getElementById("lock").style.display = "none";
+        document.getElementById("content").style.display = "block";
+        var audio = document.getElementById("music");
+        audio.play().catch(()=>{});
+    } else {
+        alert("Wrong password 😔");
+    }
+}
+</script>
+
+</body>
+</html>
